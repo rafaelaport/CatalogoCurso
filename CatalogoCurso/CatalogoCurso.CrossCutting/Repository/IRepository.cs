@@ -9,7 +9,7 @@ namespace CatalogoCurso.CrossCutting.Repository
     public interface IRepository<T> where T : class
     {
         Task Salvar(T entity);
-        Task Excluir(T entity);
+        Task Desativar(T entity);
         Task Atualizar(T entity);
         Task<T> ObterPorId(object id);
         Task<IEnumerable<T>> ObterTodos();

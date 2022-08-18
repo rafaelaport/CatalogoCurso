@@ -1,3 +1,4 @@
+using CatalogoCurso.Application;
 using CatalogoCurso.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -6,7 +7,9 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 
-builder.Services.RegisterRepository(builder.Configuration.GetConnectionString("CatalogoCurso"));
+builder.Services
+    .RegisterApplication()
+    .RegisterRepository(builder.Configuration.GetConnectionString("CatalogoCurso"));
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();

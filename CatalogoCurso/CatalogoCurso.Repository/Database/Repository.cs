@@ -22,9 +22,9 @@ namespace CatalogoCurso.Repository.Database
             Query = Context.Set<T>();
         }
 
-        public async Task Excluir(T entity)
+        public async Task Desativar(T entity)
         {
-            this.Query.Remove(entity);
+            this.Query.Update(entity);
             await this.Context.SaveChangesAsync();
         }
 

@@ -16,6 +16,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CatalogoCurso.Application\CatalogoCurso.Application.csproj" />
     <ProjectReference Include="..\CatalogoCurso.Repository\CatalogoCurso.Repository.csproj" />
   </ItemGroup>
 

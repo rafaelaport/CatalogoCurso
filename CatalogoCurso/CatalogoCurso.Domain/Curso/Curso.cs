@@ -21,6 +21,7 @@ namespace CatalogoCurso.Domain.Curso
         public EixoTecnologico EixoTecnologico { get; set; }
         public Segmento Segmento { get; set; }
         public DateTime DataCadastro {get; set; }
+        public DateTime DataAtualizacao { get; set; }
         public bool Ativo { get; set; }
     }
 }

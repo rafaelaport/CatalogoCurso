@@ -31,6 +31,7 @@ namespace CatalogoCurso.Repository.Mapping
             builder.HasOne(x => x.Segmento);
 
             builder.Property(x => x.DataCadastro).HasDefaultValueSql("getdate()").IsRequired();
+            builder.Property(x => x.DataAtualizacao).IsRequired();
             builder.Property(x => x.Ativo).HasDefaultValue(true).IsRequired();
 
 
