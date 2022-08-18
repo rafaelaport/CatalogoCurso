@@ -1,0 +1,13 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/CatalogoCurso/.vs
+/CatalogoCurso/CatalogoCurso.Api/bin/Debug/net6.0
+/CatalogoCurso/CatalogoCurso.Api/obj
+/CatalogoCurso/CatalogoCurso.CrossCutting/bin/Debug/net6.0
+/CatalogoCurso/CatalogoCurso.CrossCutting/obj
+/CatalogoCurso/CatalogoCurso.Domain/bin/Debug/net6.0
+/CatalogoCurso/CatalogoCurso.Domain/obj
+/CatalogoCurso/CatalogoCurso.Repository/bin/Debug/net6.0
+/CatalogoCurso/CatalogoCurso.Repository/obj
