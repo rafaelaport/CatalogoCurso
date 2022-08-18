@@ -4,6 +4,7 @@ using CatalogoCurso.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CatalogoCurso.Repository.Migrations
 {
     [DbContext(typeof(CatalogoCursoContext))]
-    partial class CatalogoCursoContextModelSnapshot : ModelSnapshot
+    [Migration("20220818024545_AdicionandoModalidadeEnsino")]
+    partial class AdicionandoModalidadeEnsino
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

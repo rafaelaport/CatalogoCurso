@@ -24,8 +24,7 @@ namespace CatalogoCurso.Repository.Mapping
             builder.Property(x => x.Avaliacao).HasMaxLength(500);
             builder.Property(x => x.Certificacao).HasMaxLength(500);
 
-            builder.Property(x => x.ModalidadeEnsino).IsRequired(); //Ead ou presencial
-
+            builder.HasOne(x => x.ModalidadeEnsino);
             builder.HasOne(x => x.TipoCurso);
             builder.HasOne(x => x.ModalidadeEducacao);
             builder.HasOne(x => x.EixoTecnologico);

@@ -15,7 +15,7 @@ namespace CatalogoCurso.Domain.Curso
         public string Bibliografia { get; set; }
         public string Avaliacao { get; set; }
         public string Certificacao { get; set; }
-        public string ModalidadeEnsino { get; set; } // Ead ou prensencial
+        public ModalidadeEnsino ModalidadeEnsino { get; set; } // Ead ou prensencial
         public TipoCurso TipoCurso { get; set; }
         public ModalidadeEducacao ModalidadeEducacao { get; set; }
         public EixoTecnologico EixoTecnologico { get; set; }
