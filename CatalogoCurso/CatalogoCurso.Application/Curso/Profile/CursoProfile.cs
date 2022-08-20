@@ -12,7 +12,9 @@ namespace CatalogoCurso.Application.Curso.Profile
         public CursoProfile()
         {
             CreateMap<Domain.Curso.Curso, CursoOutputDto>();
-            CreateMap<CursoInputDto, Domain.Curso.Curso>();
+
+            CreateMap<CursoInputDto, Domain.Curso.Curso>();                
+
             CreateMap<CursoUpdateDto, Domain.Curso.Curso>();
         }
     }

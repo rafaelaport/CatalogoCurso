@@ -10,7 +10,7 @@ namespace CatalogoCurso.Application.Curso.Service
     public interface ICursoService
     {
         Task<CursoOutputDto> Salvar(CursoInputDto cursoDto);
-        Task<CursoOutputDto> Desativar(CursoUpdateDto cursoDto);
+        Task<CursoOutputDto> Desativar(Guid cursoDto);
         Task<CursoOutputDto> Atualizar(CursoUpdateDto cursoDto);
         Task<CursoOutputDto> ObterPorId(Guid cursoId);
         Task<List<CursoOutputDto>> ObterTodos();

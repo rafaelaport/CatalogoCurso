@@ -24,11 +24,11 @@ namespace CatalogoCurso.Repository.Mapping
             builder.Property(x => x.Avaliacao).HasMaxLength(500);
             builder.Property(x => x.Certificacao).HasMaxLength(500);
 
-            builder.HasOne(x => x.ModalidadeEnsino);
-            builder.HasOne(x => x.TipoCurso);
-            builder.HasOne(x => x.ModalidadeEducacao);
-            builder.HasOne(x => x.EixoTecnologico);
-            builder.HasOne(x => x.Segmento);
+            builder.HasOne(x => x.ModalidadeEnsino).WithMany().HasForeignKey(y => y.ModalidadeEnsinoId);
+            builder.HasOne(x => x.TipoCurso).WithMany().HasForeignKey(y => y.TipoCursoId);
+            builder.HasOne(x => x.ModalidadeEducacao).WithMany().HasForeignKey(y => y.ModalidadeEducacaoId);
+            builder.HasOne(x => x.EixoTecnologico).WithMany().HasForeignKey(y => y.EixoTecnologicoId);
+            builder.HasOne(x => x.Segmento).WithMany().HasForeignKey(y => y.SegmentoId);
 
             builder.Property(x => x.DataCadastro).HasDefaultValueSql("getdate()").IsRequired();
             builder.Property(x => x.DataAtualizacao).IsRequired();

@@ -13,11 +13,11 @@ namespace CatalogoCurso.Application.Curso.Dto
         string Bibliografia,
         string Avaliacao,
         string Certificacao,
-        Guid ModalidadeEnsino,
-        Guid TipoCurso,
-        Guid ModalidadeEducacao,
-        Guid EixoTecnologico,
-        Guid Segmento);
+        Guid ModalidadeEnsinoId,
+        Guid TipoCursoId,
+        Guid ModalidadeEducacaoId,
+        Guid EixoTecnologicoId,
+        Guid SegmentoId);
 
     public record CursoOutputDto(
         Guid Id,
@@ -27,11 +27,11 @@ namespace CatalogoCurso.Application.Curso.Dto
         string Bibliografia,
         string Avaliacao,
         string Certificacao,
-        Guid ModalidadeEnsino,
-        Guid TipoCurso,
-        Guid ModalidadeEducacao,
-        Guid EixoTecnologico,
-        Guid Segmento);
+        Guid ModalidadeEnsinoId,
+        Guid TipoCursoId,
+        Guid ModalidadeEducacaoId,
+        Guid EixoTecnologicoId,
+        Guid SegmentoId);
 
     public record CursoUpdateDto(
         Guid Id,
@@ -41,9 +41,9 @@ namespace CatalogoCurso.Application.Curso.Dto
         string Bibliografia,
         string Avaliacao,
         string Certificacao,
-        Guid ModalidadeEnsino,
-        Guid TipoCurso,
-        Guid ModalidadeEducacao,
-        Guid EixoTecnologico,
-        Guid Segmento);
+        Guid ModalidadeEnsinoId,
+        Guid TipoCursoId,
+        Guid ModalidadeEducacaoId,
+        Guid EixoTecnologicoId,
+        Guid SegmentoId);
 }

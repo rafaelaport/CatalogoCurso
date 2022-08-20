@@ -27,9 +27,9 @@ namespace CatalogoCurso.Application.Curso.Service
             return _mapper.Map<CursoOutputDto>(curso);
         }
 
-        public async Task<CursoOutputDto> Desativar(CursoUpdateDto cursoDto)
+        public async Task<CursoOutputDto> Desativar(Guid cursoId)
         {
-            var curso = _mapper.Map<Domain.Curso.Curso>(cursoDto);
+            var curso = await _cursoRepository.ObterPorId(cursoId);
             curso.Ativo = false; //Todo: colocar ativo em um metodo apartado
             await _cursoRepository.Desativar(curso);
             return _mapper.Map<CursoOutputDto>(curso);
