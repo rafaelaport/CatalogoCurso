@@ -1,4 +1,5 @@
-﻿using CatalogoCurso.CrossCutting.Repository;
+﻿using CatalogoCurso.CrossCutting.Entity;
+using CatalogoCurso.CrossCutting.Repository;
 using CatalogoCurso.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
@@ -11,7 +12,7 @@ using System.Threading.Tasks;
 
 namespace CatalogoCurso.Repository.Database
 {
-    public class Repository<T> : IRepository<T> where T : class
+    public class Repository<T> : IRepository<T> where T : Entity<T>
     {
         public DbSet<T> Query { get; set; }
         public DbContext Context { get; set; }
@@ -28,14 +29,17 @@ namespace CatalogoCurso.Repository.Database
             await this.Context.SaveChangesAsync();
         }
 
-        public async Task<T> ObterPorId(object id)
+        public virtual async Task<T> ObterPorId(Guid id)
         {
-            return await this.Query.FindAsync(id);
+            //return await this.Query.FindAsync(id);
+            return await this.Query
+                              .AsNoTrackingWithIdentityResolution()
+                              .FirstOrDefaultAsync(x => x.Id == id && x.Ativo);
         }
 
-        public async Task<IEnumerable<T>> ObterTodos()
+        public virtual async Task<IEnumerable<T>> ObterTodos()
         {
-            return await this.Query
+            return await this.Query.Where(x => x.Ativo)
                              .AsNoTrackingWithIdentityResolution()
                              .ToListAsync();
         }

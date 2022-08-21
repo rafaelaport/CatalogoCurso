@@ -2,6 +2,7 @@
 using CatalogoCurso.Domain.Curso.Repository;
 using CatalogoCurso.Repository.Context;
 using CatalogoCurso.Repository.Database;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,8 +14,9 @@ namespace CatalogoCurso.Repository.Repository
     public class CursoRepository : Repository<Curso>, ICursoRepository
     {
         public CursoRepository(CatalogoCursoContext context) : base(context)
-        {
+        {           
 
         }
+
     }
 }

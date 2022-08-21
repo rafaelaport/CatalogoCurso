@@ -23,6 +23,7 @@ namespace CatalogoCurso.Application.Curso.Service
         public async Task<CursoOutputDto> Salvar(CursoInputDto cursoDto)
         {
             var curso = _mapper.Map<Domain.Curso.Curso>(cursoDto);
+            curso = curso.Cadastrar(curso);
             await _cursoRepository.Salvar(curso);
             return _mapper.Map<CursoOutputDto>(curso);
         }
@@ -30,17 +31,20 @@ namespace CatalogoCurso.Application.Curso.Service
         public async Task<CursoOutputDto> Desativar(Guid cursoId)
         {
             var curso = await _cursoRepository.ObterPorId(cursoId);
-            curso.Ativo = false; //Todo: colocar ativo em um metodo apartado
+            curso.Destivar();
             await _cursoRepository.Desativar(curso);
             return _mapper.Map<CursoOutputDto>(curso);
         }
 
         public async Task<CursoOutputDto> Atualizar(CursoUpdateDto cursoDto)
         {
+            var cursoBD = await _cursoRepository.ObterPorId(cursoDto.Id);
             var curso = _mapper.Map<Domain.Curso.Curso>(cursoDto);
-            curso.DataAtualizacao = DateTime.Now; //Todo: colocar dataAtualizacao em um metodo apartado
-            await _cursoRepository.Atualizar(curso);
-            return _mapper.Map<CursoOutputDto>(curso);
+
+            cursoBD.Atualizar(curso);
+
+            await _cursoRepository.Atualizar(cursoBD);
+            return _mapper.Map<CursoOutputDto>(cursoBD);
         }
 
         public async Task<CursoOutputDto> ObterPorId(Guid cursoId)

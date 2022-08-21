@@ -7,10 +7,8 @@ using System.Threading.Tasks;
 
 namespace CatalogoCurso.Domain.Curso
 {
-    public class Segmento : Entity<Guid>
+    public class Segmento : Entity<Segmento>
     {
         public string Descricao { get; set; }
-        public DateTime DataCadastro { get; set; }
-        public bool Ativo { get; set; }
     }
 }

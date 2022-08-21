@@ -4,6 +4,7 @@ using CatalogoCurso.Repository.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CatalogoCurso.Repository.Migrations
 {
     [DbContext(typeof(CatalogoCursoContext))]
-    partial class CatalogoCursoContextModelSnapshot : ModelSnapshot
+    [Migration("20220820014534_AjusteEdicao")]
+    partial class AjusteEdicao
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -98,10 +100,14 @@ namespace CatalogoCurso.Repository.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("Ativo")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
 
                     b.Property<DateTime>("DataCadastro")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -120,10 +126,14 @@ namespace CatalogoCurso.Repository.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("Ativo")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
 
                     b.Property<DateTime>("DataCadastro")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -163,10 +173,14 @@ namespace CatalogoCurso.Repository.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("Ativo")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
 
                     b.Property<DateTime>("DataCadastro")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
 
                     b.Property<string>("Descricao")
                         .IsRequired()
@@ -185,10 +199,14 @@ namespace CatalogoCurso.Repository.Migrations
                         .HasColumnType("uniqueidentifier");
 
                     b.Property<bool>("Ativo")
-                        .HasColumnType("bit");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(true);
 
                     b.Property<DateTime>("DataCadastro")
-                        .HasColumnType("datetime2");
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("getdate()");
 
                     b.Property<string>("Descricao")
                         .IsRequired()

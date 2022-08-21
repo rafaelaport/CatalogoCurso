@@ -9,5 +9,6 @@ namespace CatalogoCurso.Domain.Curso.Repository
 {
     public interface ICursoRepository : IRepository<Curso>
     {
+   
     }
 }

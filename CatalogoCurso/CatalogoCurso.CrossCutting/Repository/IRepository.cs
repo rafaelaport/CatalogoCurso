@@ -11,7 +11,7 @@ namespace CatalogoCurso.CrossCutting.Repository
         Task Salvar(T entity);
         Task Desativar(T entity);
         Task Atualizar(T entity);
-        Task<T> ObterPorId(object id);
+        Task<T> ObterPorId(Guid id);
         Task<IEnumerable<T>> ObterTodos();
         
 

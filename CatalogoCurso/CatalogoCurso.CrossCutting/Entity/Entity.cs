@@ -8,7 +8,9 @@ namespace CatalogoCurso.CrossCutting.Entity
 {
     public class Entity<T>
     {
-        public virtual T Id { get; set; }
+        public virtual Guid Id { get; set; }
+        public virtual bool Ativo { get; set; }
+        public virtual DateTime DataCadastro { get; set; }
 
     }
 }

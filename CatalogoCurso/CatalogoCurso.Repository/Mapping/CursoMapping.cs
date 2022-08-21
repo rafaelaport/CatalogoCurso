@@ -30,9 +30,8 @@ namespace CatalogoCurso.Repository.Mapping
             builder.HasOne(x => x.EixoTecnologico).WithMany().HasForeignKey(y => y.EixoTecnologicoId);
             builder.HasOne(x => x.Segmento).WithMany().HasForeignKey(y => y.SegmentoId);
 
-            builder.Property(x => x.DataCadastro).HasDefaultValueSql("getdate()").IsRequired();
-            builder.Property(x => x.DataAtualizacao).IsRequired();
-            builder.Property(x => x.Ativo).HasDefaultValue(true).IsRequired();
+            builder.Property(x => x.DataCadastro).IsRequired();
+            builder.Property(x => x.Ativo).IsRequired();
 
 
         }

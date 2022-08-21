@@ -18,8 +18,9 @@ namespace CatalogoCurso.Repository.Mapping
             builder.Property(x => x.Id).ValueGeneratedOnAdd();
 
             builder.Property(x => x.Descricao).IsRequired().HasMaxLength(200);
-            builder.Property(x => x.DataCadastro).HasDefaultValueSql("getdate()").IsRequired();
-            builder.Property(x => x.Ativo).HasDefaultValue(true).IsRequired();
+
+            builder.Property(x => x.DataCadastro).IsRequired();
+            builder.Property(x => x.Ativo).IsRequired();
         }
     }
 }
