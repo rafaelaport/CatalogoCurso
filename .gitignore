@@ -2,14 +2,16 @@
 # This .gitignore file was automatically created by Microsoft(R) Visual Studio.
 ################################################################################
 
-/CatalogoCurso/.vs
-/CatalogoCurso/CatalogoCurso.Api/bin/Debug/net6.0
-/CatalogoCurso/CatalogoCurso.Api/obj
-/CatalogoCurso/CatalogoCurso.CrossCutting/bin/Debug/net6.0
-/CatalogoCurso/CatalogoCurso.CrossCutting/obj
-/CatalogoCurso/CatalogoCurso.Domain/bin/Debug/net6.0
-/CatalogoCurso/CatalogoCurso.Domain/obj
-/CatalogoCurso/CatalogoCurso.Repository/bin/Debug/net6.0
-/CatalogoCurso/CatalogoCurso.Repository/obj
-/CatalogoCurso/CatalogoCurso.Application/obj
-/CatalogoCurso/CatalogoCurso.Application/bin/Debug/net6.0
+/CatalogoCurso_API/.vs
+/CatalogoCurso_API/CatalogoCurso.Api/bin/Debug/net6.0
+/CatalogoCurso_API/CatalogoCurso.Api/obj
+/CatalogoCurso_API/CatalogoCurso.CrossCutting/bin/Debug/net6.0
+/CatalogoCurso_API/CatalogoCurso.CrossCutting/obj
+/CatalogoCurso_API/CatalogoCurso.Domain/bin/Debug/net6.0
+/CatalogoCurso_API/CatalogoCurso.Domain/obj
+/CatalogoCurso_API/CatalogoCurso.Repository/bin/Debug/net6.0
+/CatalogoCurso_API/CatalogoCurso.Repository/obj
+/CatalogoCurso_API/CatalogoCurso.Application/obj
+/CatalogoCurso_API/CatalogoCurso.Application/bin/Debug/net6.0
+/CatalogoCurso_API/CatalogoCurso.Api/appsettings.Development.json
+/CatalogoCurso_API/CatalogoCurso.Api/appsettings.json
