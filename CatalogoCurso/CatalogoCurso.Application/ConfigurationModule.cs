@@ -1,4 +1,5 @@
 ﻿using CatalogoCurso.Application.Curso.Service;
+using CatalogoCurso.Application.Curso.Service.Interface;
 using MediatR;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -17,6 +18,11 @@ namespace CatalogoCurso.Application
             services.AddMediatR(typeof(Application.ConfigurationModule).Assembly);
 
             services.AddScoped<ICursoService, CursoService>();
+            services.AddScoped<IEixoTecnologicoService, EixoTecnologicoService>();
+            services.AddScoped<IModalidadeEducacaoService, ModalidadeEducacaoService>();
+            services.AddScoped<IModalidadeEnsinoService, ModalidadeEnsinoService>();
+            services.AddScoped<ISegmentoService, SegmentoService>();
+            services.AddScoped<ITipoCursoService, TipoCursoService>();
 
             return services;
         }

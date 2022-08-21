@@ -1,5 +1,6 @@
 ﻿using AutoMapper;
 using CatalogoCurso.Application.Curso.Dto;
+using CatalogoCurso.Application.Curso.Service.Interface;
 using CatalogoCurso.Domain.Curso.Repository;
 using System;
 using System.Collections.Generic;
@@ -54,8 +55,8 @@ namespace CatalogoCurso.Application.Curso.Service
         }
         public async Task<List<CursoOutputDto>> ObterTodos()
         {
-            var curso = await _cursoRepository.ObterTodos();
-            return _mapper.Map<List<CursoOutputDto>>(curso);
+            var cursos = await _cursoRepository.ObterTodos();
+            return _mapper.Map<List<CursoOutputDto>>(cursos);
         }
 
     }

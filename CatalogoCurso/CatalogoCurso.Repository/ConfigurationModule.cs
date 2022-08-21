@@ -23,6 +23,11 @@ namespace CatalogoCurso.Repository
 
             services.AddScoped(typeof(Repository<>));
             services.AddScoped<ICursoRepository, CursoRepository>();
+            services.AddScoped<IEixoTecnologicoRepository, EixoTecnologicoRepository>();
+            services.AddScoped<IModalidadeEducacaoRepository, ModalidadeEducacaoRepository>();
+            services.AddScoped<IModalidadeEnsinoRepository, ModalidadeEnsinoRepository>();
+            services.AddScoped<ISegmentoRepository, SegmentoRepository>();
+            services.AddScoped<ITipoCursoRepository, TipoCursoRepository>();
 
             return services;
         }

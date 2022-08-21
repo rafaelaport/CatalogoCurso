@@ -49,4 +49,34 @@ namespace CatalogoCurso.Application.Curso.Dto
         Guid ModalidadeEducacaoId,
         Guid EixoTecnologicoId,
         Guid SegmentoId);
+
+    public record EixoTecnologicoOutputDto(
+        Guid Id,
+        string Descricao,
+        DateTime DataCadastro,
+        bool Ativo);
+
+    public record ModalidadeEducacaoOutputDto(
+        Guid Id,
+        string Descricao,
+        DateTime DataCadastro,
+        bool Ativo);
+
+    public record ModalidadeEnsinoOutputDto(
+    Guid Id,
+    string Descricao,
+    DateTime DataCadastro,
+    bool Ativo);
+
+    public record SegmentoOutputDto(
+    Guid Id,
+    string Descricao,
+    DateTime DataCadastro,
+    bool Ativo);
+
+    public record TipoCursoOutputDto(
+    Guid Id,
+    string Descricao,
+    DateTime DataCadastro,
+    bool Ativo);
 }

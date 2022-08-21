@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CatalogoCurso.Application.Curso.Service
+namespace CatalogoCurso.Application.Curso.Service.Interface
 {
     public interface ICursoService
     {
