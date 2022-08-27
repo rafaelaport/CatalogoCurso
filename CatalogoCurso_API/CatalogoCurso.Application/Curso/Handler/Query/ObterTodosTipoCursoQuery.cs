@@ -14,11 +14,11 @@ namespace CatalogoCurso.Application.Curso.Handler.Query
 
     public class ObterTodosTipoCursoQueryResponse
     {
-        public IList<TipoCursoOutputDto> TipoCursos { get; set; }
+        public IList<TipoCursoOutputDto> TiposCurso { get; set; }
 
-        public ObterTodosTipoCursoQueryResponse(IList<TipoCursoOutputDto> tipoCursos)
+        public ObterTodosTipoCursoQueryResponse(IList<TipoCursoOutputDto> tiposCurso)
         {
-            TipoCursos = tipoCursos;
+            TiposCurso = tiposCurso;
         }
 
     }
