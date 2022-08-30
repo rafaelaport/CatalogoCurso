@@ -24,7 +24,7 @@ namespace CatalogoCurso.Application.Curso.Service
         public async Task<List<TipoCursoOutputDto>> ObterTodos()
         {
             var tiposCurso = await _tipoCursoRepository.ObterTodos();
-            return _mapper.Map<List<TipoCursoOutputDto>>(tiposCurso);
+            return _mapper.Map<List<TipoCursoOutputDto>>(tiposCurso.OrderBy(x => x.Descricao));
         }
     }
 }

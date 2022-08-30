@@ -18,5 +18,18 @@ namespace CatalogoCurso.Repository.Repository
 
         }
 
+        public override async Task<IEnumerable<Curso>> ObterTodos()
+        {
+            return await this.Query
+                             .Include(c => c.ModalidadeEnsino)
+                             .Include(c => c.TipoCurso)
+                             .Include(c => c.ModalidadeEducacao)
+                             .Include(c => c.EixoTecnologico)
+                             .Include(c => c.Segmento)
+                             .Where(c => c.Ativo)
+                             .AsNoTrackingWithIdentityResolution()
+                             .ToListAsync();
+        }
+
     }
 }

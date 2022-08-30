@@ -24,7 +24,7 @@ namespace CatalogoCurso.Application.Curso.Service
         public async Task<List<EixoTecnologicoOutputDto>> ObterTodos()
         {
             var eixos = await _eixoTecnologicoRepository.ObterTodos();
-            return _mapper.Map<List<EixoTecnologicoOutputDto>>(eixos);
+            return _mapper.Map<List<EixoTecnologicoOutputDto>>(eixos.OrderBy(x => x.Descricao));
         }
     }
 }

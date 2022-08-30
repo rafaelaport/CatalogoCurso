@@ -56,7 +56,7 @@ namespace CatalogoCurso.Application.Curso.Service
         public async Task<List<CursoOutputDto>> ObterTodos()
         {
             var cursos = await _cursoRepository.ObterTodos();
-            return _mapper.Map<List<CursoOutputDto>>(cursos);
+            return _mapper.Map<List<CursoOutputDto>>(cursos.OrderBy(x => x.Nome));
         }
 
     }

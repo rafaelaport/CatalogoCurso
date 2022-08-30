@@ -15,3 +15,8 @@
 /CatalogoCurso_API/CatalogoCurso.Application/bin/Debug/net6.0
 /CatalogoCurso_API/CatalogoCurso.Api/appsettings.Development.json
 /CatalogoCurso_API/CatalogoCurso.Api/appsettings.json
+/CatalogoCurso_API/CatalogoCurso.Application/bin/Release/net6.0
+/CatalogoCurso_API/CatalogoCurso.CrossCutting/bin/Release/net6.0
+/CatalogoCurso_API/CatalogoCurso.Domain/bin/Release/net6.0
+/CatalogoCurso_API/CatalogoCurso.Repository/bin/Release/net6.0
+/CatalogoCurso_API/CatalogoCurso.Api/bin/Release/net6.0

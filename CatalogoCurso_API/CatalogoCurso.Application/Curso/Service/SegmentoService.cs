@@ -24,7 +24,7 @@ namespace CatalogoCurso.Application.Curso.Service
         public async Task<List<SegmentoOutputDto>> ObterTodos()
         {
             var segmentos = await _segmentoRepository.ObterTodos();
-            return _mapper.Map<List<SegmentoOutputDto>>(segmentos);
+            return _mapper.Map<List<SegmentoOutputDto>>(segmentos.OrderBy(x => x.Descricao));
         }
     }
 }
