@@ -14,7 +14,7 @@ namespace CatalogoCurso.Repository.Repository
     public class CursoRepository : Repository<Curso>, ICursoRepository
     {
         public CursoRepository(CatalogoCursoContext context) : base(context)
-        {           
+        {
 
         }
 
@@ -29,6 +29,18 @@ namespace CatalogoCurso.Repository.Repository
                              .Where(c => c.Ativo)
                              .AsNoTrackingWithIdentityResolution()
                              .ToListAsync();
+        }
+
+        public override async Task<Curso> ObterPorId(Guid id)
+        {
+            return await this.Query
+                             .Include(c => c.ModalidadeEnsino)
+                             .Include(c => c.TipoCurso)
+                             .Include(c => c.ModalidadeEducacao)
+                             .Include(c => c.EixoTecnologico)
+                             .Include(c => c.Segmento)
+                              .AsNoTrackingWithIdentityResolution()
+                              .FirstOrDefaultAsync(x => x.Id == id && x.Ativo);
         }
 
     }

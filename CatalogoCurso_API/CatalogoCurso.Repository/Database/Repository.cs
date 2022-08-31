@@ -31,7 +31,6 @@ namespace CatalogoCurso.Repository.Database
 
         public virtual async Task<T> ObterPorId(Guid id)
         {
-            //return await this.Query.FindAsync(id);
             return await this.Query
                               .AsNoTrackingWithIdentityResolution()
                               .FirstOrDefaultAsync(x => x.Id == id && x.Ativo);
