@@ -7,7 +7,8 @@ import { BaseService } from "./base.service";
 @Injectable()
 export class CursoService extends BaseService{
 
-    UrlAPI = 'https://pos-infnet-catalogo-curso.azurewebsites.net/api/'
+    UrlAPI = 'https://pos-infnet-catalogo-curso.azure-api.net/v1/api/'
+    //UrlAPI = 'https://pos-infnet-catalogo-curso.azurewebsites.net/api/'
     //UrlAPI = 'https://localhost:7262/api/'
 
     constructor(private httpClient: HttpClient) {
